@@ -283,7 +283,7 @@ export default async function Home() {
       <Container className="mt-15 sm:mt-30">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Freelance Software Developer in the Gloucstershire Region.
+            Freelance Software Developer in the Gloucestershire Region.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I am a full stack developer with experience in application support, implementation engineering, analytics and cloud-based product delivery. I am passionate about building reliable, scalable and secure software solutions that meet the needs of users and businesses.
