@@ -1,0 +1,43 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'Public Amenity Locator',
+  description: 'A community-driven web app for identifying and mapping public amenities using AI image recognition.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The Public Amenity Locator is a community-driven web app for identifying and mapping public amenities using AI-powered image recognition. Users upload photos of amenities, and the app verifies the type using a Hugging Face image classification model. The goal is to build a crowdsourced, self-verifying map of useful public infrastructure that’s often missing from traditional mapping services.
+
+## Features
+
+- **AI-Powered Verification:** Upload a photo and the app confirms the amenity type using Hugging Face’s image classification API.
+- **8 Amenity Types:** Supports rubbish bins, dog waste stations, benches, postboxes, drinking fountains, bicycle racks, ATMs, and EV charging stations.
+- **Flexible Upload:** Drag-and-drop, file picker, or paste an image URL.
+- **Geolocation:** Captures GPS coordinates for mapping verified amenities.
+- **Gamification:** Points system, leaderboard, and achievements to encourage contributions.
+- **Responsive Design:** Works on both desktop and mobile.
+
+## Tech Stack
+
+- **Backend:** Node.js + Express
+- **Frontend:** Plain HTML/CSS/JS (static files)
+- **AI:** Hugging Face Inference API (google/vit-base-patch16-224)
+- **Upload Handling:** Multer
+
+## Challenges
+
+The main challenge was ensuring data integrity in a crowdsourced environment. Integrating computer vision as a gatekeeper helped filter out incorrect submissions and maintain a high-quality dataset. Handling image uploads, geolocation, and real-time verification required careful coordination between the client, server, and AI API.
+
+## Lessons Learned
+
+This project highlighted the value of AI for data validation in crowdsourced apps. By automating verification, the app can scale its dataset while maintaining trust and accuracy—making it a promising approach for hyper-local mapping projects.

@@ -1,7 +1,19 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
+import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  outputFileTracingIncludes: {
+    '/articles/*': ['./app/articles/**/*.mdx'],
+  },
+}
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: ['remark-gfm'],
+    rehypePlugins: ['@mapbox/rehype-prism'],
+  },
+})
+
+export default withMDX(nextConfig)

@@ -1,0 +1,41 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'SAC Cloud Agent API Utility',
+  description: 'A utility for authenticated REST calls to Apache Tomcat cloud agents, reporting version and JDBC driver details.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The SAC Cloud Agent API Utility is a tool developed to interact with Apache Tomcat-based cloud agents via authenticated REST calls. The utility retrieves and reports version information and JDBC driver details, streamlining support and maintenance for SAP Analytics Cloud environments.
+
+## Features
+
+- Authenticated REST API calls to cloud agents
+- Retrieval of agent version and JDBC driver details
+- Command-line interface for quick diagnostics
+- Designed for SAP Analytics Cloud support teams
+
+## Tech Stack
+
+- Node.js
+- REST APIs
+- Apache Tomcat
+- SAP Analytics Cloud
+
+## Challenges
+
+Ensuring secure authentication and compatibility with various agent configurations was a primary challenge. The tool needed to be robust against network issues and provide clear, actionable diagnostics for support engineers.
+
+## Lessons Learned
+
+Building targeted utilities for internal support can greatly improve operational efficiency. This project reinforced the value of automation and clear reporting in enterprise environments.

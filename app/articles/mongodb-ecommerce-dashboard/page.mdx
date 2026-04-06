@@ -1,0 +1,44 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'MongoDB E-Commerce Dashboard',
+  description: 'A Next.js analytics dashboard for MongoDB data visualization and reporting.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The MongoDB E-Commerce Dashboard is a data visualization and analytics suite built with Next.js and the native MongoDB driver. The dashboard provides real-time insights into sales, orders, users, and product data, all powered by efficient aggregation pipelines. By skipping ORMs and abstractions, the app delivers lean, high-performance analytics directly to the frontend, making it ideal for retail and e-commerce scenarios.
+
+## Features
+
+- **Sales & Order Visualization:** Interactive charts for sales, orders, users, and products.
+- **KPI Summary Cards:** At-a-glance metrics for key business indicators.
+- **Rich Chart Types:** Bar, line, pie, radar, and treemap visualizations.
+- **Seed Scripts:** Demo data population for quick setup and testing.
+- **REST API Endpoints:** Access analytics data programmatically.
+- **Parallel Aggregations:** Multiple MongoDB pipelines run in parallel for fast dashboard loads.
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router, Server Components)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** MongoDB (Native Driver)
+- **Visualization:** Recharts, Lucide Icons
+
+## Challenges
+
+The main challenge was building a performant dashboard without relying on ORMs or abstraction layers. Writing raw MongoDB aggregation pipelines required careful planning to ensure accurate joins and efficient data retrieval. Handling multiple, complex queries in parallel and delivering clean, real-time analytics to the frontend pushed the limits of both the database and the UI.
+
+## Lessons Learned
+
+This project reinforced the value of working close to the metal with native database drivers for maximum performance. Leveraging Promise.all for parallel data fetching and focusing on server-side calculations resulted in a responsive, scalable dashboard. The experience highlighted the importance of efficient data modeling and aggregation in analytics-heavy applications.

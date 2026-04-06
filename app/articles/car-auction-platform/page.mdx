@@ -1,0 +1,47 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'Car Auction Platform',
+  description: 'A modern Next.js application for buying and selling vehicles through an online auction system.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The Car Auction Platform is a modern, full-stack Next.js application for buying and selling vehicles through a real-time online auction system. The platform supports live bidding, auction management, watchlists, and a robust analytics dashboard, all designed to deliver a seamless experience for both sellers and bidders. The project emphasizes secure authentication, role-based workflows, and real-time data updates, making it a comprehensive solution for digital vehicle auctions.
+
+## Features
+
+- **Create & Manage Auctions:** List vehicles with detailed specs and photos, set auction parameters, and manage listings.
+- **Live Bidding System:** Real-time countdowns, bid validation, and activity tracking for active auctions.
+- **Watchlist:** Track vehicles of interest and monitor auction progress.
+- **Bid History & Analytics:** Visual insights into auction trends, bid distribution, and performance metrics via dashboard charts.
+- **User Profiles:** Seller and bidder profiles with ratings, history, and secure authentication.
+- **Search & Filtering:** Find vehicles by make, model, price, and more.
+- **Secure Authentication:** Email-based login, session management, and role-based access.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** PostgreSQL (Neon)
+- **Authentication:** NextAuth.js v5
+- **Charts & Visualization:** Recharts
+- **Utilities:** Bcrypt, Zod, Clsx
+
+## Challenges
+
+Building a real-time auction platform required careful management of business logic and concurrency. Key challenges included preventing sellers from bidding on their own vehicles, handling high-frequency bid updates, and keeping the UI in sync with live auction states. Integrating secure authentication and role-based workflows added complexity, as did ensuring the analytics dashboard provided actionable insights without performance bottlenecks.
+
+## Lessons Learned
+
+This project highlighted the importance of robust validation, clear separation of user roles, and real-time data handling in modern web applications. Leveraging Next.js, PostgreSQL, and Tailwind CSS enabled rapid development and a polished user experience. The experience reinforced best practices for building scalable, secure, and interactive platforms.

@@ -1,0 +1,46 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'Next-Cloudinary',
+  description: 'A real-time image engine using Next.js and Cloudinary, with dynamic transformation logic.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+## GitHub
+
+<a href="https://github.com/JoshWilliams92/Next_Cloudinary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+
+## Overview
+
+Next-Cloudinary is a real-time image transformation engine built with Next.js and the Cloudinary API. The project leverages the url gen module to apply dynamic transformations to images, enabling on-the-fly resizing, cropping, and effects. Claude.ai was used to help architect the transformation logic and state management, resulting in a flexible and scalable solution for modern web apps.
+
+## Features
+
+- Real-time image transformations (resize, crop, effects)
+- Dynamic URL generation for Cloudinary assets
+- State management for transformation parameters
+- Open source and extensible
+
+## Tech Stack
+
+- Next.js
+- Cloudinary (@cloudinary)
+- Tailwind CSS
+- Claude.ai (for architecture and logic design)
+
+## Challenges
+
+Designing a robust transformation logic that could handle a wide range of image operations required careful planning. Integrating state management for real-time updates and ensuring compatibility with Cloudinary’s API were key technical hurdles.
+
+## Lessons Learned
+
+This project demonstrated the power of combining AI-assisted architecture (Claude.ai) with modern frameworks like Next.js and Cloudinary. The result is a highly flexible image engine that can be adapted for a variety of use cases.

@@ -1,0 +1,41 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'Nest Angular Cryptocurrency API',
+  description: 'Displaying Crypto Currency prices from external API in near real-time on a 2 second interval server poll.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The Nest Angular Cryptocurrency API is a real-time crypto price tracker built with Nest.js and Angular. The app fetches and displays cryptocurrency prices from an external API, updating every two seconds using a custom server polling engine powered by RXJS. The project focuses on pure logic and reactive programming, avoiding LLMs or wrappers for a clean, maintainable architecture as it was built prior to the generative AI revolution.
+
+## Features
+
+- **Real-Time Prices:** Fetches and displays live cryptocurrency prices with a two-second polling interval.
+- **RXJS Polling Engine:** Uses interval and switchMap operators to manage API requests and prevent race conditions.
+- **Angular Frontend:** Responsive UI for viewing price data.
+- **Nest.js Backend:** Handles API requests and environment configuration.
+- **Environment Config:** Easy setup with .env files for API keys and endpoints.
+
+## Tech Stack
+
+- **Backend:** Nest.js (Node.js)
+- **Frontend:** Angular
+- **Reactive Programming:** RXJS
+
+## Challenges
+
+The main challenge was building a robust polling engine that could handle frequent updates without causing race conditions or memory leaks. Leveraging RXJS’s interval and switchMap operators provided a clean solution for managing asynchronous data streams. Ensuring smooth integration between the Nest.js backend and Angular frontend required careful API design and environment management.
+
+## Lessons Learned
+
+This project reinforced the power of reactive programming for real-time applications. By focusing on pure logic and leveraging RXJS, it’s possible to build efficient, maintainable polling systems without unnecessary complexity.

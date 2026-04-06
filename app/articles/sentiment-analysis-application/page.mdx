@@ -1,0 +1,43 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'Sentiment Analysis Application',
+  description: 'An internal workflow for classifying customer ticket sentiment from CLOB data.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The Sentiment Analysis Application is an internal tool designed to classify the sentiment of customer support tickets stored as CLOB data. 
+Prior to migrating to ServiceNow we were using an internal tool that had no API access so we had to place mock data in an Oracle Database.
+The workflow helps identify support patterns and trends, enabling proactive improvements in customer service.
+
+## Features
+
+- Automated sentiment classification of ticket descriptions
+- Analysis of large-scale CLOB data
+- Pattern recognition for support trends
+- Integration with internal reporting tools
+
+## Tech Stack
+
+- Node.js
+- Natural Language Processing (NLP)
+- Database with CLOB support
+- Internal analytics/reporting tools
+
+## Challenges
+
+Processing and analyzing unstructured CLOB data at scale required efficient parsing and NLP techniques. Ensuring accurate sentiment classification and integrating results with existing reporting systems were key technical challenges.
+
+## Lessons Learned
+
+This project highlighted the importance of automated analysis in large-scale support environments. By surfacing sentiment trends, the tool enables more targeted and effective customer service strategies.

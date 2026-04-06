@@ -1,0 +1,46 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'HAR SAML Decoder',
+  description: 'A privacy-first web tool for decoding and inspecting SAML 2.0 responses from HAR files or raw Base64 input.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The HAR SAML Decoder is a privacy-first web tool for decoding and inspecting SAML 2.0 responses from HAR files or raw Base64 input. Designed to eliminate manual log parsing, the app automates extraction, validation, and visualization of SAML assertions—entirely in the browser. No data ever leaves your machine, making it ideal for sensitive authentication debugging and analysis.
+
+## Features
+
+- **HAR File Upload:** Drag-and-drop a .har file to extract SAMLResponse parameters automatically.
+- **Raw Base64 Input:** Paste a Base64-encoded SAML response for instant decoding.
+- **XML Pretty-Print:** Syntax-highlighted, formatted SAML XML with one-click copy.
+- **Attribute Extraction:** Tabular view of all SAML attributes, NameID, Issuer, and conditions.
+- **Certificate Inspection:** X.509 certificate details with PEM export and DER validation.
+- **Validation Panel:** Pass/warn/fail checks for timestamps, signatures, audience, and more.
+- **100% Client-Side:** All decoding, parsing, and validation run in the browser—no server calls.
+- **IDP Agnostic:** Works with Okta, Azure AD, ADFS, Ping, OneLogin, Shibboleth, and more.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router, React 19)
+- **Language:** TypeScript (strict mode)
+- **Styling:** Tailwind CSS 4
+- **SAML Parsing:** DOMParser + namespace-aware XML traversal
+- **Architecture:** Server Components shell, single Client Component boundary
+
+## Challenges
+
+The biggest challenge was reliably extracting SAMLResponse values from a variety of HAR file structures and encoding formats. Building a robust parser required a mix of structured object traversal and regex matching to handle edge cases. Ensuring all processing remained client-side for privacy, while providing a seamless user experience, pushed the limits of browser-based tooling.
+
+## Lessons Learned
+
+This project demonstrated the power of client-side web apps for sensitive data workflows. By automating tedious manual steps and focusing on privacy, HAR SAML Decoder streamlines SSO troubleshooting and makes advanced SAML analysis accessible to support and engineering teams.

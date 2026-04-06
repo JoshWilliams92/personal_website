@@ -1,0 +1,43 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Josh Williams',
+  date: '2026-04-03',
+  title: 'CSS Grid Payment Card Readers',
+  description: 'A showcase of payment card readers built with pure HTML and Tailwind CSS, leveraging CSS Grid for layout.'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Overview
+
+The CSS Grid Payment Card Readers is a fully static, responsive showcase of payment card readers (Dojo, iZettle, SumUp) built entirely with semantic HTML and Tailwind CSS. The project explores how far you can push CSS Grid and utility classes to recreate physical hardware in the browser—without using any images or external design assets. Each card reader is crafted with only HTML divs and clever styling, resulting in a rapid prototyping playground for high-fidelity UI components.
+
+## Features
+
+- **No Images:** Every button, screen, and bezel is a styled div—no Photoshop or static exports.
+- **CSS Grid Layout:** Complex nesting and grid alignment for precise hardware replication.
+- **3D Effects:** Multi-layered box-shadows and gradients create tactile depth and realism.
+- **Fully Responsive:** The layout adapts seamlessly to different screen sizes.
+- **Zero Build Tools:** Open `index.html` directly in your browser—no dependencies or build steps required.
+- **Easy Customization:** Duplicate a card section and adjust markup/styles to add your own readers.
+
+## Tech Stack
+
+- **Language:** Semantic HTML5
+- **Styling:** Tailwind CSS (via CDN, zero-config)
+- **Layout:** CSS Grid
+- **Architecture:** 100% static, deploy-ready (Netlify, Vercel, GitHub Pages, etc.)
+
+## Challenges
+
+The main challenge was replicating the tactile feel and visual complexity of real-world hardware using only CSS and HTML. Achieving realistic shadows, gradients, and button depth required careful layering and experimentation with utility classes. Ensuring the design remained fully responsive and accessible without images or custom CSS pushed the limits of what’s possible with Tailwind and Grid.
+
+## Lessons Learned
+
+This project proved that you can build high-fidelity, interactive UI components without leaving your code editor or relying on design tools. By leaning into modern CSS features and utility-first workflows, it’s possible to rapidly prototype and iterate on complex visuals—making it a valuable exercise for both learning and inspiration.
